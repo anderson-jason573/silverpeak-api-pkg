@@ -22,9 +22,17 @@ api_session = api.OrchHelper(url, user, pwd)  # Create OrchHelper object
 #    mfa = input("Enter MFA code: ")
 #    api_session.mfa_login(mfa)
 
-site_list = api_session.login()  # Call login method on OrchHelper object
+# Call login method on OrchHelper object.  This will login to the
+# Orchestrator, create an API session, and return information on each
+# site which can be used for future API calls.
 
-# Add addtional code here
+site_list = api_session.login()
+
+""" start task specific code here:
+
+** Add additional code here
+
+end task specific code """
 
 api_session.logout()
 
