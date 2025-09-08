@@ -1,3 +1,4 @@
+import api
 import os
 from dotenv import find_dotenv, load_dotenv
 
@@ -9,14 +10,13 @@ load_dotenv(dotenv_path)
 orch_url = os.getenv("ORCH_URL")
 orch_api_key = os.getenv("ORCH_API_KEY")
 
-# Create Headers for API Call
-
-headers = {}
-headers['Content-Type'] = 'application/json'
-headers['X-Auth-Token'] = orch_api_key
-
+"""
 #Pass Orchestrator url and headers for API Call to desired module/function.
 #Full URL for API call will be completed in the module being called in next section.
-"""
+
+#Example:
+
 apiCall = api.<desired module/function>(orch_url, headers)
 """
+apiCall = api.OrchHostname(orch_url, orch_api_key)
+

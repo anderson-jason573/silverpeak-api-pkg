@@ -7,11 +7,13 @@ package, so they can be called by using 'api.<function>'.
 
 ***************************************************************
 """
-
+import requests
+import json
+import sys
 from .login import OrchLogin
 from .yamlConversion import readYAML
 from .preconfigOrch import preconfigUpload
 from .spcustomFile import spcustomCreate
 from .applianceInfo import applianceINFO
-
+from .get_Orchestrator_Hostname import OrchHostname
 #end
