@@ -18,13 +18,14 @@ def OrchHostname(orch_url, orch_api_key):
 # Make API Call
     response = requests.get(url, headers=headers)
 
-# Print API Call Results
+# Print error handling and API call results
     if response.status_code == 200:
-        print('Appliance information retrieved successfully.')
+        print('\n' + 'Information retrieved successfully. Https response code = ' + str(response.status_code))
     else:
-        sys.exit('Retrieval of appliance information has failed.')
+        sys.exit('\n' + 'Retrieval of information has failed. Https response code = ' +str(response.status_code))
 
 # Deserialize json from API call to 'json_response' and print
     json_response = json.loads(response.text)
-    print(json_response)
+    print('\n' + str(json_response) + '\n')
 
+#end
