@@ -9,14 +9,14 @@ load_dotenv(dotenv_path)
 orch_url = os.getenv("ORCH_URL")
 orch_api_key = os.getenv("ORCH_API_KEY")
 
-# Create URL and Headers for API Call
-url = orch_url + 'gmsHostname'
+# Create Headers for API Call
 
 headers = {}
 headers['Content-Type'] = 'application/json'
 headers['X-Auth-Token'] = orch_api_key
 
-#Pass url and headers for API Call to desired module/function
+#Pass Orchestrator url and headers for API Call to desired module/function.
+#Full URL for API call will be completed in the module being called in next section.
 """
-apiCall = api.<desired module/function>(url, headers)
-
+apiCall = api.<desired module/function>(orch_url, headers)
+"""
