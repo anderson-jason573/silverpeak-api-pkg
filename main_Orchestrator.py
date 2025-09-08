@@ -3,7 +3,7 @@ import os
 from dotenv import find_dotenv, load_dotenv
 
 #load Orchestrator URL and API Key from .env file
-env_path = '.env'                                                               # Or specify a different path
+env_path = '.env'                                                               # Set path to .env file.  Here the .env file is in the same directory.
 if not os.path.exists(env_path):                                                # Error Handling if .env cannot be found       
     raise FileNotFoundError(f"The .env file was not found at: {env_path}")
 else:
