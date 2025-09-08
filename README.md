@@ -17,6 +17,8 @@ Steps to run:
             ORCH_URL = '<Rest API of URL of target Orchestrator>'  ##This can be found under the 'Support--->Rest API' menu of your Orchestrator ##
 
             ORCH_API_KEY = '<API Key created in Orchestrator>'     ## Create key under the 'Orchestrator--->API Key' menu of your Orchestrator ##
+
+            ## See '.env.example' file for details ##
     
     2.) Select module that you want to run, i.e. 'GET_Orchestrator_Hostname.py'
 

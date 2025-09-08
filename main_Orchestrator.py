@@ -7,8 +7,8 @@ dotenv_path = find_dotenv()     # Finds path to .env file
 load_dotenv(dotenv_path)        # loads .env file
 
 # Set Orchestrator FQDN/IP and API Key via from .env file
-orch_url = os.getenv("ORCH_URL")              # reads .env file and sets 'orch_url' variable
-orch_api_key = os.getenv("ORCH_API_KEY")      # reads .env file and sets 'orch_api_key' variable
+orch_url = os.environ.get("ORCH_URL")              # reads .env file and sets 'orch_url' variable
+orch_api_key = os.environ.get("ORCH_API_KEY")      # reads .env file and sets 'orch_api_key' variable
 
 """
 #Pass Orchestrator url and headers for API Call to desired module/function.
