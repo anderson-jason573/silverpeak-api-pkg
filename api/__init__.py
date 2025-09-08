@@ -15,5 +15,5 @@ from .yamlConversion import readYAML
 from .preconfigOrch import preconfigUpload
 from .spcustomFile import spcustomCreate
 from .applianceInfo import applianceINFO
-from .get_Orchestrator_Hostname import OrchHostname
+from .GET_Orchestrator_Hostname import OrchHostname
 #end
