@@ -1,15 +1,16 @@
-Collection of functions for Silver Peak API calls,
-contained in a package called 'api'.  When 'api' package
-is imported, it imports all functions from each module
-in the package.  To call a function from one of the modules,
-preface the function with "api.".
 
-For example, to pass the necessary variables to the function 'OrchHostname'
-in the 'GET_Orchestrator_Hostname.py' module, use 'api.OrchHostname(orch_url, orch_api_key)'.
 
-API keys are used for authentication, rather than user names and passwords.
+API keys are used for authentication, rather than user names and passwords.  These are created in the Orchestrator
+under the "Orchestrator ---> API Keys" menu.  See '.env.example' file for reference.  Place the .env file in 
+the same directory where the '.env.example' file currently resides.
+
 A ".env" file is needed, to pass the Orchestrator URL and API key as 
 environmental variables in the 'main.Orchestrator.py' and 'main.Appliance(S).py' scripts.
+
+The functions for api calls arecontained in a package called 'api'.  When the 'api' package
+is imported, it imports all functions from each module in the package.  To call a function from one of the modules,
+preface the function with "api.".  For example, to pass the necessary variables to the function 'OrchHostname'
+in the 'GET_Orchestrator_Hostname.py' module, use 'api.OrchHostname(orch_url, orch_api_key)'.
 
 Steps to run:
 
@@ -28,4 +29,4 @@ Steps to run:
 
     5.) Update 'apiCall' function call (line #21) with the function name obtained in step #3
 
-Additional modules will be added, as they are developed.
+
