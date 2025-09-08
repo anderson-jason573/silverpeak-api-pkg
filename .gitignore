@@ -67,3 +67,6 @@ logging/
 
 #IDE
 .idea/
+
+#Notes
+notes.txt
