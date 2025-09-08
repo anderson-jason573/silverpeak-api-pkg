@@ -19,4 +19,3 @@ orch_api_key = os.getenv("ORCH_API_KEY")      # reads .env file and sets 'orch_a
 apiCall = api.<desired module/function>(orch_url, headers)
 """
 apiCall = api.OrchHostname(orch_url, orch_api_key)  # passes url and api key to 'OrchHostname function' in 'GET_Orchestrator_Hostname.py' module
-
