@@ -19,14 +19,17 @@ else:
     print("\nEnvironment variables loaded successfully.")
 
 # Set Orchestrator FQDN/IP and API Key via from .env file
-ec_url = os.environ.get("EC_URL")                                           # Reads .env file and sets 'ec_url' variable
-user = os.environ.get("USER")                                               # Reads .env file and sets 'user' variable
-password = os.environ.get("PASSWORD")                                       # Reads .env file and sets 'password' variable                                  
+ec_url = os.environ.get("EC_URL")                                               # Reads .env file and sets 'ec_url' variable
+user = os.environ.get("USER")                                                   # Reads .env file and sets 'user' variable
+password = os.environ.get("PASSWORD")                                           # Reads .env file and sets 'password' variable                                  
 
 """ 
 Pass appliance url, user and password to 'login.py' module,
 to login and receive SessionID cookie to use for remaining api calls.
 """
 
-vxoaSessionID = api.orchLogin(ec_url, user, password)                       
+vxoaSessionID = api.ecLogin(ec_url, user, password)                       
 
+print(vxoaSessionID)
+
+#end
