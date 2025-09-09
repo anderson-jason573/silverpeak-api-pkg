@@ -2,7 +2,7 @@ import requests
 import json
 import sys
 
-def OrchHostname(orch_url, orch_api_key):
+def orchHostname(orch_url, orch_api_key):
 
 # Create URL and Headers for API Call
     url = orch_url + 'gmsHostname'

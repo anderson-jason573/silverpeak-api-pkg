@@ -12,5 +12,5 @@ It also imports the requests, json and sys packages.
 import requests
 import json
 import sys
-from .get_Orchestrator_Hostname import OrchHostname
+from .get_orchestrator_hostname import orchHostname
 #end

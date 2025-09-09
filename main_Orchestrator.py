@@ -1,3 +1,9 @@
+###################################################################################
+#                                                                                 # 
+# For direct API calls to the Orchestrator, an API key is used for authentication #
+#                                                                                 #
+###################################################################################
+
 import api
 import os
 from dotenv import find_dotenv, load_dotenv
@@ -11,8 +17,8 @@ else:
     print("\nEnvironment variables loaded successfully.")
 
 # Set Orchestrator FQDN/IP and API Key via from .env file
-orch_url = os.environ.get("ORCH_URL")                                           # reads .env file and sets 'orch_url' variable
-orch_api_key = os.environ.get("ORCH_API_KEY")                                   # reads .env file and sets 'orch_api_key' variable
+orch_url = os.environ.get("ORCH_URL")                                           # Reads .env file and sets 'orch_url' variable
+orch_api_key = os.environ.get("ORCH_API_KEY")                                   # Reads .env file and sets 'orch_api_key' variable
 
 """
 #Pass Orchestrator url and headers for API Call to desired module/function.
@@ -23,5 +29,5 @@ orch_api_key = os.environ.get("ORCH_API_KEY")                                   
 apiCall = api.<desired module/function>(orch_url, headers)
 
 """
-apiCall = api.OrchHostname(orch_url, orch_api_key)                              # passes url and api key to 'OrchHostname function' in 'GET_Orchestrator_Hostname.py' module
+apiCall = api.orchHostname(orch_url, orch_api_key)                              # Passes url and api key to 'OrchHostname function' in 'GET_Orchestrator_Hostname.py' module
 
