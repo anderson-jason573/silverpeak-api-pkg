@@ -14,4 +14,6 @@ import json
 import sys
 from .get_orchestrator_hostname import orchHostname
 from .login import ecLogin
+from .get_appliance_hostname import ecHostname
+
 #end

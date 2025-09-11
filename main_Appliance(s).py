@@ -24,12 +24,15 @@ user = os.environ.get("USER")                                                   
 password = os.environ.get("PASSWORD")                                           # Reads .env file and sets 'password' variable                                  
 
 """ 
-Pass appliance url, user and password to 'login.py' module,
-to login and receive SessionID cookie to use for remaining api calls.
+Pass appliance url, user and password to 'ecLogin' function of the 'login.py' module,
+to login and receive Session cookies to use for remaining api calls.  
 """
 
-vxoaSessionID = api.ecLogin(ec_url, user, password)                       
+sessionCookies = api.ecLogin(ec_url, user, password)
 
-print(vxoaSessionID)
+hostname = api.ecHostname(ec_url, sessionCookies)
+
+print('\n')
+print(hostname)
 
 #end
