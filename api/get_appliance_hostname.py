@@ -27,13 +27,10 @@ def ecHostname(ec_url, sessionCookies):
     response = requests.get(url, headers=headers, cookies=sessionCookies, verify = False)
 
 # Print error handling and API call results
-    if response.status_code == 200:
-        print('\n' + 'Login successful. Https response code = ' + str(response.status_code))
-    else:
-        sys.exit('\n' + 'Login unsuccessful. Https response code = ' +str(response.status_code))
+    if response.status_code != 200:
+        sys.exit('\n' + 'Request unsuccessful. Https response code = ' +str(response.status_code))
 
-
-# store login cookie, from API call, in "orchCookie" and return for future API calls
+# Return information
 
     json_response = json.loads(response.text)
     return(json_response)
