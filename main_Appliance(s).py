@@ -1,7 +1,7 @@
 #################################################################################################################
 #                                                                                                               #
 # API keys are not supported for api calls directly to an appliance.                                            #
-# A username and password are required for initial login.  Use an .env file to load them                        #
+# A username and password are required for initial login.  This module uses an .env file to load them           #
 # as environmental variables.                                                                                   #
 #                                                                                                               #
 # Upon initial login, the appliance will return a set of cookies that will be used for                          #    
