@@ -8,7 +8,7 @@
 # subsequent api calls for the session, in lieu of the user and password vairables.                             #
 # The cookies must be returned in every REST request after intitial login.  In addition,                        #
 # the 'edgeosCsrfToken' cookie must also be passed in the headers with the header name 'X-XSRF-Token'.          #
-# If 'X-XSRF-Token' is invalid or not present, and CSRF protection is enforced, rest requests will be rejected.  # 
+# If 'X-XSRF-Token' is invalid or not present, and CSRF protection is enforced, rest requests will be rejected. # 
 #                                                                                                               #
 #################################################################################################################
 
