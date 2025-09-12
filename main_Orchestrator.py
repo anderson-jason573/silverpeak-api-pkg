@@ -1,11 +1,13 @@
 ###################################################################################
 #                                                                                 # 
 # For direct API calls to the Orchestrator, an API key is used for authentication #
+# This module uses a .env file, to load the api key.                              #
 #                                                                                 #
 ###################################################################################
 
 import api
 import os
+import sys
 from dotenv import find_dotenv, load_dotenv
 
 #load Orchestrator URL and API Key from .env file
@@ -14,18 +16,25 @@ if not os.path.exists(env_path):                                                
     raise FileNotFoundError(f"The .env file was not found at: {env_path}")
 else:
     load_dotenv(dotenv_path=env_path)
-    print("\nEnvironment variables loaded successfully.")
+    
 
 # Set Orchestrator FQDN/IP and API Key via from .env file
 orch_url = os.environ.get("ORCH_URL")                                           # Reads .env file and sets 'orch_url' variable
+if orch_url is None:
+    sys.exit('\n' + '"ORCH_URL" is not set in .env file')
+else:
+    print('"orch_url" loaded successfully')
+    
 orch_api_key = os.environ.get("ORCH_API_KEY")                                   # Reads .env file and sets 'orch_api_key' variable
+if orch_api_key is None:
+    sys.exit('\n' + '"ORCH_API_KEY" is not set in .env file')
+else:
+    print('"orch_api_key" loaded successfully')
 
 """
-#Pass Orchestrator url and headers for API Call to desired module/function.
-#Full URL for API call will be completed in the module being called in next section.
+Pass Orchestrator url and API key for API Call to desired module/function.
 
-#Example:
-
+Example:
 apiCall = api.<desired module/function>(orch_url, headers)
 
 """

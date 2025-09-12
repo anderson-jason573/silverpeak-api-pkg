@@ -1,9 +1,9 @@
 This repository is meant to be an introduction to using Silver Peak/EdgeConnect APIs.  The 'main' scripts are meant
 to demonstrate the three different types of API calls:
 
-    1.) API calls directly to the Orchestrator
-    2.) API calls directly to an appliance
-    3.) API calls to an appliance via the Orchestrator
+    1.) API calls directly to the Orchestrator - 'main_Orchestrator.py'
+    2.) API calls directly to an appliance - 'main_Appliance.py'
+    3.) API calls to an appliance via the Orchestrator - 'main_Appliance_via_Orchestrtor.py'
 
 API keys are used for authentication, rather than user names and passwords.  These are created in the Orchestrator
 under the "Orchestrator ---> API Keys" menu.  See '.env.example' file for reference.  Place the .env file in 
@@ -33,5 +33,4 @@ Steps to run:
     4.) Select proper 'main' script.  For Orchestrator API calls, use 'main_Orchestrator.py'.  For API calls to appliances, use 'main_Appliance(s).py
 
     5.) Update 'apiCall' function call (line #21) with the function name obtained in step #3
-
 

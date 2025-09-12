@@ -14,6 +14,7 @@
 
 import api
 import os
+import sys
 from dotenv import find_dotenv, load_dotenv
 
 # Load Appliance(s) URL(s), user and password from .env file
@@ -22,12 +23,25 @@ if not os.path.exists(env_path):                                                
     raise FileNotFoundError(f"The .env file was not found at: {env_path}")
 else:
     load_dotenv(dotenv_path=env_path)
-    print("\nEnvironment variables loaded successfully.")
 
 # Set Orchestrator FQDN/IP and API Key via from .env file
 ec_url = os.environ.get("EC_URL")                                               # Reads .env file and sets 'ec_url' variable
+if ec_url is None:
+    sys.exit('\n' + '"EC_URL" is not set in .env file')
+else:
+    print('"ec_url" loaded successfully')
+
 user = os.environ.get("USER")                                                   # Reads .env file and sets 'user' variable
+if user is None:
+    sys.exit('\n' + '"USER" is not set in .env file')
+else:
+    print('"user" loaded successfully')
+
 password = os.environ.get("PASSWORD")                                           # Reads .env file and sets 'password' variable                                  
+if password is None:
+    sys.exit('\n' + '"PASSWORD" is not set in .env file')
+else:
+    print('"password" loaded successfully')
 
 """ 
 Pass appliance url, user and password to 'ecLogin' function of the 'login.py' module,
